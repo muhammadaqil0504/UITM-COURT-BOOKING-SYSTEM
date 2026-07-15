@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Notifications Workspace View Custom Stylesheet (Full-Width Style)
+   ========================================================================== */
+
+/* Notification Item Wrapper Base Layout */
+.notification-list-item {
+    border: 1px solid #eef0f2 !important;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.notification-list-item:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.04) !important;
+    border-color: #dee2e6 !important;
+}
+
+/* Unread Alert State Styles */
+.notification-list-item.unread-state {
+    background-color: #fdf8ff !important; /* Extremely soft purple tint for unread items */
+    border-left: 4px solid #6f42c1 !important;
+}
+
+/* Custom Soft Color Background Overlays */
+.bg-success-light {
+    background-color: #e6f7ed !important;
+}
+
+.bg-danger-light {
+    background-color: #ffe3e3 !important;
+}
+
+.bg-secondary-light {
+    background-color: #f1f3f5 !important;
+}
+
+.text-secondary-dark {
+    color: #495057 !important;
+}
+
+/* Theme Purple Action Pill Overrides */
+.btn-purple {
+    background-color: #6f42c1 !important;
+    color: #ffffff !important;
+    border-color: #6f42c1 !important;
+}
+
+/* Badge Layout Formatting Utilities */
+.unread-indicator-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #6f42c1;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Font Adjustments */
+.extra-small-text {
+    font-size: 0.75rem !important;
+}
+
+@media (max-width: 767.98px) {
+    .border-md-top-0 {
+        border-top: 0 !important;
+    }
+}
