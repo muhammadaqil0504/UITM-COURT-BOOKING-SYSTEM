@@ -1,0 +1,91 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
+
+/* Specific wireframe color match values */
+.bg-uitm {
+    background-color: #0b112c !important; /* Deep Dark Space Navy */
+}
+
+.dark-text {
+    color: #0a0a0a;
+}
+
+/* Hero Section Image Background & Dark Overlay */
+.hero-section {
+    background: linear-gradient(rgba(11, 17, 44, 0.75), rgba(11, 17, 44, 0.75)), 
+                url('https://images.unsplash.com/photo-1544698310-74ea9d1c8258?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    height: 52vh;
+    min-height: 380px;
+}
+
+.hero-lead {
+    font-size: 0.95rem;
+    max-width: 500px;
+    opacity: 0.85;
+    font-weight: 300;
+}
+
+/* Rounded Core CTA Buttons */
+.btn-purple-action {
+    background-color: #551a8b !important; /* Solid Matte Purple */
+    color: #ffffff !important;             /* Explicitly force white text visibility */
+    font-size: 0.9rem;
+    font-weight: 500;                      /* Enhanced weight for better readability */
+    border: none;
+    min-width: 130px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-purple-action:hover {
+    background-color: #722bb4 !important; /* Brighter purple tint on hover interaction */
+    color: #ffffff !important;
+}
+
+/* Feature Grid Icon Subsets */
+.icon-circle {
+    width: 54px;
+    height: 54px;
+    background-color: #eaddf7; /* Very Light Tint Purple */
+    color: #551a8b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+}
+
+.feature-p {
+    font-size: 0.85rem;
+    max-width: 210px;
+    line-height: 1.4;
+}
+
+/* Footer Adjustments */
+.footer-title {
+    font-size: 0.85rem;
+}
+
+.extra-small-text {
+    font-size: 0.75rem;
+}
+
+footer .small {
+    font-size: 0.8rem;
+}
+/* Ensure footer text and links remain perfectly crisp and visible */
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+/* Enhancing icon size alignment inside the feature circles */
+.icon-circle i {
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1;
+}
