@@ -1,0 +1,156 @@
+
+        /* ==========================================================================
+           1. Base Setup & Layout Elements (Aligned with Dashboard)
+           ========================================================================== */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            overflow-x: hidden;
+        }
+        .tracking-wide { letter-spacing: 0.05em; }
+        .tracking-tight { letter-spacing: -0.025em; }
+        .layout-wrapper { width: 100%; }
+        .workspace-content { min-width: 0; }
+
+        /* ==========================================================================
+           2. Core Sidebar Overrides (UiTM Purple & Gold Layout Harmony)
+           ========================================================================== */
+        .sidebar-navigation {
+            width: 260px;
+            background-color: #2b1b54 !important; /* UiTM Corporate Purple */
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1045;
+        }
+        
+        .sidebar-navigation .nav-link {
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .sidebar-navigation .nav-link i {
+            font-size: 1.15rem;
+            color: inherit !important;
+        }
+
+        .sidebar-navigation .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-navigation .nav-link.active {
+            color: #ffd700 !important; /* UiTM Distinct Gold/Yellow */
+            background-color: rgba(255, 255, 255, 0.15);
+            font-weight: 600;
+        }
+
+        .sidebar-brand-showcase img {
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .text-muted-small { color: #6c757d; font-size: 0.72rem; }
+
+        /* ==========================================================================
+           3. Data Grid Table & Filter Component Styling
+           ========================================================================== */
+        .custom-data-table {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #eef0f2;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 1px 2px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+        }
+
+        .custom-data-table thead th {
+            background-color: #f8fafc;
+            color: #64748b;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 16px 24px;
+            border-bottom: 1px solid #eef0f2;
+        }
+
+        .custom-data-table tbody tr {
+            border-bottom: 1px solid #f1f3f5;
+            transition: background-color 0.15s ease;
+        }
+
+        .custom-data-table tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .custom-data-table tbody td {
+            padding: 18px 24px;
+            font-size: 0.88rem;
+            color: #333333;
+            vertical-align: middle;
+        }
+
+        /* Status Badges */
+        .status-pill-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            text-transform: capitalize;
+        }
+        .badge-status-confirmed { background-color: #e6f6ec; color: #15803d; }
+        .badge-status-pending { background-color: #ffedd5; color: #9a3412; }
+        .badge-status-complete { background-color: #dbeafe; color: #1e40af; }
+        .badge-status-cancelled { background-color: #fee2e2; color: #991b1b; }
+
+        .btn-action-delete {
+            background: none;
+            border: none;
+            color: #ef4444;
+            font-size: 1.15rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-action-delete:hover {
+            background-color: #fee2e2;
+        }
+
+        .font-monospace-id {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #64748b;
+            font-size: 0.82rem;
+        }
+
+        /* ==========================================================================
+           4. Mobile-Responsive Framework Layout Override Engines
+           ========================================================================== */
+        #mobileBookingsCardDeck {
+            display: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar-navigation { width: 280px; }
+            .sidebar-navigation:not(.show) { visibility: hidden; }
+            
+            /* Hide traditional table grid view on smaller screens */
+            .desktop-table-container {
+                display: none !important;
+            }
+            
+            /* Enable responsive responsive layout deck framework */
+            #mobileBookingsCardDeck {
+                display: block;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .workspace-content { padding-left: 1rem !important; padding-right: 1rem !important; }
+        }

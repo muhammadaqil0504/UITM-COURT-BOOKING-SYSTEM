@@ -1,0 +1,201 @@
+/* ==========================================================================
+   1. Base Setup & Typography
+   ========================================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    overflow-x: hidden;
+}
+
+/* Tracking utility extensions */
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+.font-monospace {
+    font-family: var(--bs-font-monospace);
+}
+
+/* ==========================================================================
+   2. Responsive Layout & Sidebar
+   ========================================================================== */
+.layout-wrapper {
+    width: 100%;
+}
+
+/* Sidebar styling for both desktop pinning and mobile offcanvas */
+.sidebar-navigation {
+    background-color: #2b1b54 !important; /* UiTM Corporate Purple */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1045; /* Ensures offcanvas sits above main workspace on mobile */
+}
+
+/* Sidebar Nav Links */
+.sidebar-navigation .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-navigation .nav-link i {
+    font-size: 1.15rem;
+}
+
+/* Active and Hover States (UiTM Gold/Yellow Accent or clean White) */
+.sidebar-navigation .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-navigation .nav-link.active {
+    color: #ffd700; /* Gold/yellow accent color */
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+}
+
+/* Sidebar brand section */
+.sidebar-brand-showcase img {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Main content adjustments */
+.workspace-content {
+    min-width: 0; /* Important container flex-shrink layout fix for Chart.js */
+}
+
+/* ==========================================================================
+   3. Admin Stats Cards
+   ========================================================================== */
+.admin-stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 12px !important;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Dynamic Stat Card Icon Wrappers */
+.stat-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Color variations */
+.bg-purple-light {
+    background-color: rgba(111, 66, 193, 0.1);
+    color: #6f42c1;
+}
+
+.bg-success-light {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.bg-blue-light {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.bg-orange-light {
+    background-color: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+}
+
+.text-muted-small {
+    color: #6c757d;
+    font-size: 0.72rem;
+}
+
+/* ==========================================================================
+   4. Live Stream Cards (Recent Bookings)
+   ========================================================================== */
+.recent-booking-item-card {
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.recent-booking-item-card:hover {
+    background-color: #f1f3f5;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.court-avatar-wrapper {
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Custom Webkit scrollbar for the recent booking stream */
+#recentBookingsCardStream::-webkit-scrollbar {
+    width: 6px;
+}
+
+#recentBookingsCardStream::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#recentBookingsCardStream::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#recentBookingsCardStream::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   5. Custom Badges & Metadata styling
+   ========================================================================== */
+.badge {
+    letter-spacing: 0.02em;
+}
+
+.styling-meta {
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. Media Query Overrides (Tablet & Mobile Safeguards)
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    /* Offcanvas adjustment on viewport compression */
+    .sidebar-navigation:not(.show) {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .workspace-content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .admin-stat-card {
+        padding: 1rem !important;
+    }
+}
