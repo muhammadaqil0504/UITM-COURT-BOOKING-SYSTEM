@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Settings Workspace View Custom Stylesheet (Full-Width Style)
+   ========================================================================== */
+
+/* Settings Section Form Cards */
+.settings-card {
+    border: 1px solid #eef0f2 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom Profile Photo Upload Placeholder Graphic Frame */
+.avatar-upload-preview {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 1.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Theme Button Overrides */
+.btn-purple {
+    background-color: #6f42c1 !important;
+    color: #ffffff !important;
+    border-color: #6f42c1 !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-purple:hover {
+    background-color: #59339d !important;
+    border-color: #59339d !important;
+}
+
+/* Form Styling Focus Transitions */
+.form-control:focus, .form-select:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.15);
+}
+
+/* Custom Switches */
+.form-check-input:checked {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+/* Typography Utility */
+.extra-small-text {
+    font-size: 0.75rem !important;
+}
