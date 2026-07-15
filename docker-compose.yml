@@ -1,0 +1,41 @@
+services:
+  # PHP Apache Web Server Service
+  web:
+    image: php:8.2-apache
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/var/www/html   # <--- Change this line to look inside your public folder!
+    command: sh -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
+    environment:
+      - DB_HOST=db
+      - DB_USER=uitm_user
+      - DB_PASSWORD=uitm_password
+      - DB_NAME=uitm_court_db
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Database service
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: uitm_court_db
+      MYSQL_USER: uitm_user
+      MYSQL_PASSWORD: uitm_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - uitm-db-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "uitm_user", "-puitm_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  uitm-db-data:
