@@ -215,9 +215,10 @@ try {
                                 <span class="text-extra-small text-muted mt-1 d-block"><i class="bi bi-info-circle me-1"></i>Email addresses are bound to your account sign-in logs and cannot be changed.</span>
                             </div>
 
-                            <button type="submit" class="btn btn-purple btn-sm py-2 px-4 rounded-3 text-white shadow-sm font-monospace tracking-wide small text-uppercase">
-                                <i class="bi bi-save me-1"></i> Save Changes
+                            <button type="submit" class="btn btn-sm py-2 px-4 rounded-3 text-white shadow-sm text-uppercase" style="background-color: #6f42c1; border-color: #6f42c1; font-weight: 500; font-size: 0.8rem;">
+                                <i class="bi bi-box-arrow-in-down me-2"></i>SAVE CHANGES
                             </button>
+                            
                         </form>
                     </div>
                 </div>
@@ -245,9 +246,10 @@ try {
                                 <input type="password" class="form-control rounded-3 p-2 small border-light-subtle shadow-sm" name="confirm_password" placeholder="Repeat new configuration" required>
                             </div>
 
-                            <button type="submit" class="btn btn-purple btn-sm py-2 px-4 rounded-3 text-white shadow-sm font-monospace tracking-wide small text-uppercase">
-                                <i class="bi bi-key me-1"></i> Update Credentials
-                            </button>
+                             <button type="submit" class="btn btn-sm py-2 px-4 rounded-3 text-white shadow-sm text-uppercase" style="background-color: #6f42c1; border-color: #6f42c1; font-weight: 500; font-size: 0.8rem;">
+                                <i class="bi bi-key me-2"></i>UPDATE CREDENTIALS
+                             </button>
+                            
                         </form>
                     </div>
                 </div>
